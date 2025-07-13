@@ -2,5 +2,6 @@ services:
   - type: web
     name: cogni-api
     runtime: python
+    pythonVersion: "3.10.13"  # Explicitly set to 3.10
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn cogni_api:app --host 0.0.0.0 --port 10000
+    startCommand: uvicorn cogni_api:app --host 0.0.0.0 --port $PORT
